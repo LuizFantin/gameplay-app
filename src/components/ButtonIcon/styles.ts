@@ -1,11 +1,12 @@
+import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 import { theme } from '../../global/styles/theme';
 
-export const Container = styled.TouchableOpacity`
+export const Container = styled(RectButton)`
     width: 100%;
     height: 56px;
     background-color: ${theme.colors.primary};
-    border-radius: 8;
+    border-radius: 8px;
     flex-direction: row;
     align-items: center;
 `;
@@ -24,6 +25,7 @@ export const Title = styled.Text`
     color: ${theme.colors.heading};
     font-size: 15px;
     text-align: center;
+    font-family: ${theme.fonts.title700};
 `;
 
 export const ImageDiscord = styled.Image`
