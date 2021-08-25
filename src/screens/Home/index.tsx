@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Appointment } from "../../components/Appointment";
+import { Appointment, AppointmentProps } from "../../components/Appointment";
+import { Background } from "../../components/Background";
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
 import { ListDivider } from "../../components/ListDivider";
@@ -17,7 +18,7 @@ export function Home() {
     }
 
     return (
-        <Container>
+        <Background>
             <Header>
                 <Profile/>
                 <ButtonAdd/>
@@ -44,6 +45,6 @@ export function Home() {
                 />
 
             </Content>
-        </Container>
+        </Background>
     )
 }

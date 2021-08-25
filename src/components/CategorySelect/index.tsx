@@ -5,11 +5,12 @@ import { categories } from "../../utils/categories";
 import { Category } from "../Category";
 
 type Props = {
-    categorySelectedId: string
+    categorySelectedId: string;
     setCategory: (categoryId: string) => void;
+    hasCheckBox?: boolean;
 }
 
-export function CategorySelect({categorySelectedId, setCategory}: Props) {
+export function CategorySelect({categorySelectedId, setCategory, hasCheckBox = false}: Props) {
     return (
         <Container
             horizontal
@@ -24,6 +25,7 @@ export function CategorySelect({categorySelectedId, setCategory}: Props) {
                         icon={category.icon}
                         checked={category.id === categorySelectedId}
                         onPress={() => setCategory(category.id)}
+                        hasCheckBox={hasCheckBox}
                     />
                 ))
             }
